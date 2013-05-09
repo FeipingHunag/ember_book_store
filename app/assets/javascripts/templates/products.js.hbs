@@ -1,0 +1,16 @@
+{{#each controller itemController="cart"}}
+  <div class="row product">
+    <div class="small-3 columns">
+      <img {{ bindAttr src=image_url }}>
+    </div>
+    <div class="small-9 columns">
+      <h3>{{ title }}</h3>
+      <P>{{{ description }}}</P>
+      <ul class="inline-list">
+        <li><strong>${{ money price }}</strong></li>
+        <li><button class="tiny button" {{ action addToCart this }}> Add to Cart</button></li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+{{/each}}

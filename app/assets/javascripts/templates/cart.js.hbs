@@ -1,0 +1,17 @@
+<h2>shopping cart</h2>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>quantity</th>
+    <th>price</th>
+  </tr>
+  {{#each line_items}}
+    {{ render 'line_item' this }}
+  {{/each}}
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell">${{ money total_price }}</td>
+  </tr>
+
+</table>
