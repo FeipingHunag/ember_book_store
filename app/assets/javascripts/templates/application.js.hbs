@@ -1,9 +1,20 @@
 <nav class="top-bar">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">Ember Book Store</a></h1>
+      <h1>{{#linkTo products}}Ember Book Store{{/linkTo}}</h1>
     </li>
   </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li>
+        {{#linkTo products.new}}
+          <i class="general foundicon-plus"></i>
+          New Book
+        {{/linkTo}}
+      </li>
+    </ul>
+  </section>
 </nav>
 
 <div class="row">

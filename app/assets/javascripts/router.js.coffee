@@ -3,6 +3,5 @@ BookStore.Router.reopen
   rootURL: '/'
 
 BookStore.Router.map ->
-  @resource('products')
-
-
+  @resource 'products', ->
+    @route 'new'
