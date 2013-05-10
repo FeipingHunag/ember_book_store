@@ -57,9 +57,6 @@ GEM
     excon (0.20.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    foundation-icons-sass-rails (2.0.0)
-      railties (>= 3.1.1)
-      sass-rails (>= 3.1.1)
     handlebars-source (1.0.0.rc3)
     heroku (2.39.2)
       heroku-api (~> 0.3.7)
@@ -147,7 +144,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   ember-rails
-  foundation-icons-sass-rails
   heroku
   jquery-rails
   pg

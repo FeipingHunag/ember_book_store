@@ -1,3 +1,3 @@
 BookStore.IndexRoute = Ember.Route.extend
   redirect: ->
-    @transitionToRoute 'products'
+    @transitionTo 'products'

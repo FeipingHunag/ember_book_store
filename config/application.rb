@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module EmberBookStore
   class Application < Rails::Application
-    config.assets.paths << Rails.root.join("fonts")
+    # config.assets.paths << Rails.root.join("fonts")
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
