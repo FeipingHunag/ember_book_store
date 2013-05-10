@@ -13,6 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20130509102341) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "postgis"
+  enable_extension "postgis_topology"
+
   create_table "line_items", force: true do |t|
     t.integer  "product_id"
     t.integer  "quantity"
@@ -27,6 +32,14 @@ ActiveRecord::Schema.define(version: 20130509102341) do
     t.decimal  "price",       precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "spatial_ref_sys", id: false, force: true do |t|
+    t.integer "srid",                   null: false
+    t.string  "auth_name", limit: 256
+    t.integer "auth_srid"
+    t.string  "srtext",    limit: 2048
+    t.string  "proj4text", limit: 2048
   end
 
 end
