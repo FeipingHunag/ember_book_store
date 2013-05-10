@@ -1,0 +1,57 @@
+<form>
+  <fieldset>
+    <legend>New Book</legend>
+    <div class="row">
+      <div class="small-2 columns">
+        <label {{ bindAttr for=title.elementTd }} class="right inline">Title</label>
+      </div>
+      <div class="small-10 columns">
+        {{input value=title placeholder="book title"}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-2 columns">
+        <label {{ bindAttr for=description.elementTd }} class="right inline">Description</label>
+      </div>
+      <div class="small-10 columns">
+        {{textarea value=description placeholder="book description" rows="8" }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-2 columns">
+        <label {{ bindAttr for=image_url.elementTd }} class="right inline">ImageUrl</label>
+      </div>
+      <div class="small-10 columns">
+        {{input value=image_url placeholder="book image url"}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-2 columns">
+        <label {{ bindAttr for=price.elementTd }} class="right inline">Price</label>
+      </div>
+      <div class="small-10 columns">
+        <div class="row collapse">
+          <div class="small-6 columns">
+            <div class="row collapse">
+              <div class="small-3 columns">
+                <span class="prefix">$</span>
+              </div>
+              <div class="small-9 columns">
+                {{input value=price placeholder="book price"}}
+              </div>
+            </div>
+          </div>
+          <div class="small-6 columns">
+            <ul class="inline-list right">
+              <li><a href="#" {{ action cancel }}>Cancle</a></li>
+              <li><button class="button small" {{ action save }}>Submit</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>

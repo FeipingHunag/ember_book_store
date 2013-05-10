@@ -1,6 +1,2 @@
-BookStore.ProductsNewController = Ember.ObjectController.extend
-  createProduct: ->
-    @store.commit()
-    @transitionTo 'products'
-
-
+BookStore.ProductsNewController = BookStore.ProductController.extend
+  legendTitle: 'Edit Book'

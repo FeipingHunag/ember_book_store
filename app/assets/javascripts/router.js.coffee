@@ -5,3 +5,5 @@ BookStore.Router.reopen
 BookStore.Router.map ->
   @resource 'products', ->
     @route 'new'
+    @route 'edit',
+      path: ':product_id/edit'

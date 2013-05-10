@@ -17,8 +17,3 @@ BookStore.ProductsIndexController = Ember.ArrayController.extend
         line_item.die '.line_item'
         @get('line_items').addObject(line_item)
     @store.commit()
-
-  products: Ember.computed ->
-    @content.filter (item) ->
-      !item.get('isNew')
-  .property('content.@each')

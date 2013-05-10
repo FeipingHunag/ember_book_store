@@ -1,18 +1,4 @@
-{{#each products}}
-  <div class="row product">
-    <div class="small-3 columns">
-      <a {{ bindAttr href=image_url }} class="th">
-        <img {{ bindAttr src=image_url }}>
-      </a>
-    </div>
-    <div class="small-9 columns">
-      <h3>{{ title }}</h3>
-      <P>{{{ description }}}</P>
-      <ul class="inline-list">
-        <li><strong>${{ money price }}</strong></li>
-        <li><button class="tiny button" {{ action addToCart this }}> Add to Cart</button></li>
-      </ul>
-    </div>
-  </div>
+{{#each controller}}
+  {{ view BookStore.ProductView }}
   <hr>
 {{/each}}
