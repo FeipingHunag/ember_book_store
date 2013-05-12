@@ -1,6 +1,5 @@
 BookStore.LineItemController = Ember.ObjectController.extend
   incrementQuantity: ->
-    console.log @get('quantity')
     @incrementProperty 'quantity'
 
   decrementQuantity: ->
