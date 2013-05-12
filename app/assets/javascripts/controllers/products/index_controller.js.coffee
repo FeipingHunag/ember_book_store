@@ -1,6 +1,6 @@
 BookStore.ProductsIndexController = Ember.ArrayController.extend
   needs: 'cart'
-  line_items: Ember.computed.alias('controllers.cart.line_items')
+  line_itemsBinding: 'controllers.cart.line_items'
 
   addToCart: (product)->
     line_item = @get('line_items').filter((item) ->

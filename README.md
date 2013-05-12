@@ -2,13 +2,14 @@ Ember Book Sotre: An ember.js demo
 ==================================
 
 - Agile Web Development with Rails book demo
+- [Live Demo](http://emberbookstore.herokuapp.com/)
 
 USAGE
 =====
 
 Run:
 
-    rake migrate 
+    rake migrate
     rake db:seed
     rails server
 
