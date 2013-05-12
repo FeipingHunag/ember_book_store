@@ -3,5 +3,6 @@ BookStore.ProductsNewRoute = Ember.Route.extend
     BookStore.Product.createRecord()
 
   exit: ->
+    @_super()
     unless @currentModel.get('isSaving')
       @currentModel.get('transaction').rollback()

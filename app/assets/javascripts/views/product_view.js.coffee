@@ -16,3 +16,4 @@ BookStore.ProductView = Ember.View.extend
 
 
 
+

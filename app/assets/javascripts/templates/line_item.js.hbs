@@ -1,5 +1,10 @@
-<tr>
   <td>{{ product.title }}</td>
-  <td>x{{ quantity }}</td>
+  {{#if view.isEditing }}
+    <td>
+      <a href="#" {{ action decrementQuantity }}>-</a>
+      {{input value=quantity class="inline"}}
+      <a href="#" {{ action incrementQuantity }}>+</a></td>
+  {{else}}
+    <td>x{{ quantity }}</td>
+  {{/if}}
   <td>${{ money total_price }}</td>
-</tr>
